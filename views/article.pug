@@ -1,0 +1,9 @@
+extends layout
+block content
+    h1= article.title
+    h5 Written by #{article.author}
+    p= article.body
+    hr
+    a.btn.btn-outline-secondary(href="/article/edit/"+article._id) Edit
+    form.d-inline-block(method='POST', action="/article/delete/"+ article._id)
+        input.btn.btn-outline-danger(type='submit', value='Delete')
