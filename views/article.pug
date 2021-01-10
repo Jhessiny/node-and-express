@@ -4,6 +4,6 @@ block content
     h5 Written by #{article.author}
     p= article.body
     hr
-    a.btn.btn-outline-secondary(href="/article/edit/"+article._id) Edit
-    form.d-inline-block(method='POST', action="/article/delete/"+ article._id)
+    a.btn.btn-outline-secondary(href="/articles/edit/"+article._id) Edit
+    form.d-inline-block(method='POST', action="/articles/delete/"+ article._id)
         input.btn.btn-outline-danger(type='submit', value='Delete')
